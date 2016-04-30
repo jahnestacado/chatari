@@ -1,0 +1,18 @@
+apply plugin: "java"
+apply plugin: "application"
+apply plugin: "eclipse"
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//******GroupId*****************ArtifactId**********Version               
+	compile group: "com.sparkjava", name: "spark-core", version: "2.3"
+	compile group: "redis.clients", name: "jedis", version: "2.8.1"
+	compile group: "org.json", name: "json", version: "20160212"
+}
+
+mainClassName = "com.jahnestacado.chatari.Main"

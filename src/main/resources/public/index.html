@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+</head>
+
+<button class="test">submit</button>
+
+<script>
+	$(".test").on("click", () => {
+		$.post("http://localhost:4567/signup", JSON.stringify({username: "foo", password: "bar"}))
+		.done((result) => {
+			console.log(result);
+		});
+	});
+</script>
+
+</html>
